@@ -21,7 +21,7 @@ const App = () => {
     let responseData = []
     if (searchText !== "") {
       if (isNaN(searchText) !== false) {
-        await axios.get(`http://localhost:8000/api/products?search=${searchText}`)
+        await axios.get(`https://simple-nodejs-backend.herokuapp.com/api/products?search=${searchText}`)
           .then(response => {
             responseData = response.data.data
             setResponseError(false)
@@ -31,7 +31,7 @@ const App = () => {
             setResponseError(true)
           })
       } else {
-        await axios.get(`http://localhost:8000/api/products/${searchText}`)
+        await axios.get(`https://simple-nodejs-backend.herokuapp.com/api/products/${searchText}`)
           .then(response => {
             responseData.push(response.data.data)
             setResponseError(false)
@@ -42,7 +42,7 @@ const App = () => {
           })
       }
     } else {
-      await axios.get('http://localhost:8000/api/products/all')
+      await axios.get('https://simple-nodejs-backend.herokuapp.com/api/products/all')
         .then(response => {
           responseData = response.data.data
           setResponseError(false)
