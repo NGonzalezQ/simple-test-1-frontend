@@ -7,6 +7,9 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    margin: 10
+  },
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -50,8 +53,8 @@ const Searchbar = ({ handleTextChange, searchItem }) => {
   const classes = useStyles()
 
   return (
-    <Grid container>
-      <Grid item xs={6}>
+    <Grid container className={classes.root}>
+      <Grid item xs={9}>
         <div className={classes.search}>
           <div className={classes.searchIcon}>
             <SearchIcon />

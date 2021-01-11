@@ -4,10 +4,9 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    marginBottom: theme.spacing(0.5)
   },
   title: {
     flexGrow: 1
@@ -22,7 +21,7 @@ const Appbar = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Prueba Acidlabs
+            Desafío Técnico Ripley
           </Typography>
           <Typography variant="h6">
             Nicolás González Q
