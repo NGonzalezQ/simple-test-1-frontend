@@ -38,7 +38,7 @@ const EditProduct = () => {
   const handleAddItem = async () => {
     if (productId !== "" && !isNaN(productPrice)) {
       try {
-        const url = `http://localhost:8000/api/products/${productId}`
+        const url = `https://simple-nodejs-backend.herokuapp.com/api/products/${productId}`
         const data = {
           name: productName,
           brand: productBrand,

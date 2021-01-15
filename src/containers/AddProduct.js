@@ -44,7 +44,7 @@ const AddProduct = () => {
       !isNaN(productPrice)
     ) {
       try {
-        const url = 'http://localhost:8000/api/products/add'
+        const url = 'https://simple-nodejs-backend.herokuapp.com/api/products/add'
         const data = {
           name: productName,
           brand: productBrand,

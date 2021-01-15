@@ -22,7 +22,7 @@ const DeleteProduct = () => {
 
   const handleSearchItem = async () => {
     if (searchText !== "") {
-      await axios.delete(`http://localhost:8000/api/products/${searchText}`)
+      await axios.delete(`https://simple-nodejs-backend.herokuapp.com/api/products/${searchText}`)
         .then(response => {
           setResponseMessage(response.data.message)
           setResponseError(false)
