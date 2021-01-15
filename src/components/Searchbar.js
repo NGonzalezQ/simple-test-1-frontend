@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const Searchbar = ({ handleTextChange, searchItem }) => {
+const Searchbar = ({ handleTextChange, searchItem, searchType }) => {
   const classes = useStyles()
 
   return (
@@ -79,7 +79,7 @@ const Searchbar = ({ handleTextChange, searchItem }) => {
           onClick={searchItem}
         >
           <Typography variant="subtitle2">
-            Buscar
+            {searchType}
           </Typography>
         </Button>
       </Grid>

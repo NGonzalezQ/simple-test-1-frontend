@@ -67,10 +67,15 @@ const ProductCard = ({
           {productPrice}
         </Typography>
       </CardContent>
-      <CardMedia
-        className={classes.media}
-        image={productImage}
-      />
+      {productImage != null
+        ? (
+          <CardMedia
+            className={classes.media}
+            image={productImage}
+          />
+        )
+        : null
+      }
     </Card>
   )
 }
